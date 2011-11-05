@@ -16,7 +16,8 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.doc.tar.xz
 Source2:	XDvi-color
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Requires:	texlive-xdvi.bin
 Provides:	tetex-xdvi = %{version}
 Provides:	xdvik = %{version}
