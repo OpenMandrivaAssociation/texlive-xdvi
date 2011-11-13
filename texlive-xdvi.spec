@@ -6,7 +6,7 @@
 # catalog-version 22.84.16
 Name:		texlive-xdvi
 Version:	22.84.16
-Release:	1
+Release:	2
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
@@ -19,10 +19,8 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-xdvi.bin
-Provides:	tetex-xdvi = %{version}
-Provides:	xdvik = %{version}
-Obsoletes:	tetex-xdvi <= 3.0
-Conflicts:	tetex-xdvi <= 3.0
+%rename tetex-xdvi
+%rename xdvik = %{version}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
