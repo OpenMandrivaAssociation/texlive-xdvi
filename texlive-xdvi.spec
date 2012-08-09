@@ -1,12 +1,12 @@
-# revision 23138
+# revision 26689
 # category TLCore
 # catalog-ctan /dviware/xdvi
-# catalog-date 2009-11-10 09:00:49 +0100
+# catalog-date 2012-04-01 12:39:29 +0200
 # catalog-license other-free
-# catalog-version 22.84.16
+# catalog-version 22.85
 Name:		texlive-xdvi
-Version:	22.84.16
-Release:	3
+Version:	22.85
+Release:	1
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
@@ -20,7 +20,7 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-xdvi.bin
 %rename tetex-xdvi
-%rename xdvik = %{version}
+%rename xdvik
 
 %description
 The canonical previewer for use on Unix and other X-windows
