@@ -1,0 +1,83 @@
+#include "XDvi"
+
+*Command.background:		rgb:d/d/d
+*Command.foreground:		rgb:2/2/2
+*Command.borderColor:		rgb:6/6/6
+*Command.highlightThickness:	0
+*Command.displayList:			\
+	foreground rgb:6/6/6; lines 2,-1,-1,-1,-1,2; point -2,-2;\
+	foreground rgb:c/c/c; points 0,0, 0,-1, -1,-1, -1,0; segments 3,-2,-3,-2, -2,-3,-2,2;\
+	foreground rgb:e/e/e; lines -3,1,1,1,1,-3;\
+	points 2,-2, -2,2;\
+	foreground rgb:f/f/f;\
+	point 2,2
+
+*Composite.background:		rgb:c/c/c
+*Composite.borderColor:		rgb:6/6/6
+*Core.background:		rgb:c/c/c
+
+*MenuButton.background:		rgb:d/d/d
+*MenuButton.foreground:		rgb:2/2/2
+*MenuButton.borderColor:	rgb:6/6/6
+*MenuButton.highlightThickness:	0
+*MenuButton.displayList:		\
+	foreground rgb:6/6/6; lines 2,-1,-1,-1,-1,2; point -2,-2;\
+	foreground rgb:c/c/c; point -1,-1;\
+	foreground rgb:e/e/e; lines -3,1,1,1,1,-3;\
+	points 2,-2, -2,2;\
+	foreground rgb:f/f/f;\
+	point 2,2
+
+*Paned.Form.displayList:		\
+	foreground rgb:a/a/a; lines 2,-1,-1,-1,-1,2; point -2,-2;\
+	foreground rgb:c/c/c; point -1,-1;\
+	foreground rgb:e/e/e; lines -3,1,1,1,1,-3;\
+	points 2,-2, -2,2;\
+	foreground rgb:f/f/f;\
+	point 2,2
+
+*SimpleMenu.background:		rgb:d/d/d
+*SimpleMenu.*.foreground:	rgb:2/2/2
+*SimpleMenu.borderWidth:	0
+*SimpleMenu.HorizontalMargins:	3
+*SimpleMenu.VerticalMargins:	3
+*SimpleMenu.displayList:		\
+	foreground rgb:4/4/4; lines 2,-1,-1,-1,-1,2;\
+	foreground rgb:a/a/a; lines 3,-2,-2,-2,-2,3;\
+	foreground rgb:e/e/e; lines -3,1,1,1,1,-2
+
+*Scrollbar.background:		rgb:9/9/9
+*Scrollbar.foreground:		rgb:4/4/4
+*Scrollbar.borderWidth:		0
+*Scrollbar.thumb:		black
+*Scrollbar.displayList:		\
+	foreground rgb:b/b/b; lines 1,-1,-1,-1,-1,1;\
+	foreground rgb:6/6/6; lines -1,0,0,0,0,-1
+
+*Form.background:		rgb:c/c/c
+*Label.background:		rgb:c/c/c
+*Toggle.background:		rgb:c/c/c
+*Radio.background:		rgb:c/c/c
+
+*List.background:		rgb:d/d/d
+*List.foreground:		rgb:2/2/2
+*List.borderColor:		rgb:9/9/9
+*List.displayList:		\
+	foreground rgb:e/e/e; lines 2,-1,-1,-1,-1,2;\
+	foreground rgb:6/6/6; lines -2,0,0,0,0,-1
+
+*Text.background:		rgb:e/e/e
+*Text.AsciiSink.foreground:	rgb:2/2/2
+*Text.AsciiSink.cursorColor:	rgb:4/4/4
+*Text.borderColor:		rgb:9/9/9
+*Text.displayList:		\
+	foreground rgb:f/f/f; lines 1,-1,-1,-1,-1,1;\
+	foreground rgb:b/b/b; lines -2,0,0,0,0,-2
+*Text.Translations: #override \
+<Enter>:	no-op()\n\
+<Leave>:	no-op()\n\
+<Btn1Down>:	set-keyboard-focus() select-start()
+
+*Viewport.borderColor:		rgb:9/9/9
+
+*Paned.internalBorderColor:	rgb:2/2/2

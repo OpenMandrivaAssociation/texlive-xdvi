@@ -62,3 +62,24 @@ popd
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 22.85-1
++ Revision: 813181
+- Update to latest release.
+
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-3
++ Revision: 757586
+- Rebuild to reduce used resources
+
+* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-2
++ Revision: 730334
+- Use rename macro instead of mix of provides/conflicts/obsoletes
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-1
++ Revision: 719921
+- texlive-xdvi
+- texlive-xdvi
+- texlive-xdvi
+
