@@ -1,11 +1,11 @@
-# revision 26689
+# revision 30339
 # category TLCore
 # catalog-ctan /dviware/xdvi
-# catalog-date 2012-04-01 12:39:29 +0200
+# catalog-date 2013-05-08 11:16:41 +0200
 # catalog-license other-free
-# catalog-version 22.85
+# catalog-version 22.86
 Name:		texlive-xdvi
-Version:	22.85
+Version:	22.86
 Release:	1
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
@@ -39,13 +39,13 @@ distributed via Tex-live.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdir}/xdvi/XDvi
-%{_texmfdir}/xdvi/pixmap/toolbar.xpm
-%{_texmfdir}/xdvi/pixmap/toolbar2.xpm
-%{_texmfdir}/xdvi/xdvi.cfg
+%{_texmfdistdir}/dvips/xdvi/config.xdvi
+%{_texmfdistdir}/xdvi/XDvi
+%{_texmfdistdir}/xdvi/pixmap/toolbar.xpm
+%{_texmfdistdir}/xdvi/pixmap/toolbar2.xpm
 %{_datadir}/X11/app-defaults/*
 %doc %{_mandir}/man1/xdvi.1*
-%doc %{_texmfdir}/doc/man/man1/xdvi.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/xdvi.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,29 +57,8 @@ distributed via Tex-live.
 mkdir -p %{buildroot}%{_datadir}/X11/app-defaults
 pushd %{buildroot}%{_datadir}/X11/app-defaults
     cp -fpa %{SOURCE2} .
-    ln -sf %{_texmfdir}/xdvi/XDvi .
+    ln -sf %{_texmfdistdir}/xdvi/XDvi .
 popd
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 22.85-1
-+ Revision: 813181
-- Update to latest release.
-
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-3
-+ Revision: 757586
-- Rebuild to reduce used resources
-
-* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-2
-+ Revision: 730334
-- Use rename macro instead of mix of provides/conflicts/obsoletes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 22.84.16-1
-+ Revision: 719921
-- texlive-xdvi
-- texlive-xdvi
-- texlive-xdvi
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
