@@ -1,12 +1,12 @@
-# revision 30339
+# revision 33736
 # category TLCore
 # catalog-ctan /dviware/xdvi
-# catalog-date 2013-05-08 11:16:41 +0200
+# catalog-date 2014-04-22 11:35:25 +0200
 # catalog-license other-free
-# catalog-version 22.86
+# catalog-version 22.87
 Name:		texlive-xdvi
-Version:	22.86
-Release:	6
+Version:	22.87
+Release:	1
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
