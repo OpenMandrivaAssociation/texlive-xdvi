@@ -5,8 +5,8 @@
 # catalog-license other-free
 # catalog-version 22.87
 Name:		texlive-xdvi
-Version:	22.87.03
-Release:	2
+Version:	22.87
+Release:	1
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
