@@ -1,18 +1,12 @@
-# revision 33736
-# category TLCore
-# catalog-ctan /dviware/xdvi
-# catalog-date 2014-04-22 11:35:25 +0200
-# catalog-license other-free
-# catalog-version 22.87
 Name:		texlive-xdvi
-Version:	22.87
+Version:	62387
 Release:	1
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.doc.r%{version}.tar.xz
 Source2:	XDvi-color
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
@@ -30,12 +24,12 @@ build with web2c "out of the box". In practice, it is usually
 distributed via Tex-live.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,15 +43,15 @@ distributed via Tex-live.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_datadir}/X11/app-defaults
 pushd %{buildroot}%{_datadir}/X11/app-defaults
-    cp -fpa %{SOURCE2} .
-    ln -sf %{_texmfdistdir}/xdvi/XDvi .
+cp -fpa %{SOURCE2} .
+ln -sf %{_texmfdistdir}/xdvi/XDvi .
 popd
 cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
