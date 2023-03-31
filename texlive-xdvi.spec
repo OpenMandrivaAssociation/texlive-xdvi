@@ -1,6 +1,6 @@
 Name:		texlive-xdvi
 Version:	62387
-Release:	1
+Release:	2
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/xdvi
