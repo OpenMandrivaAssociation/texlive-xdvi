@@ -3,7 +3,7 @@ Version:	62387
 Release:	2
 Summary:	A DVI previewer for the X Window System
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/dviware/xdvi
+URL:		https://www.ctan.org/tex-archive/dviware/xdvi
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xdvi.doc.r%{version}.tar.xz
